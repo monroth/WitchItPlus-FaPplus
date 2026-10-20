@@ -1,0 +1,13 @@
+{
+  "package_versions": {
+    "FillAPotPlus": "3.2.0"
+  },
+  "release_zip": {
+    "bytes": 302775,
+    "name": "fillapot-plus-3.2.0.zip",
+    "sha256": "a76804d031aed2443d133fc9a153aa58c656d1ebc9343b9d8320fededa7cb2f9"
+  },
+  "repository": "monroth/WitchItPlus-FaPplus",
+  "source_commit": "c58a810d239cafc115c82646d7f153ad5bf94076",
+  "updater_production_ready": false
+}
