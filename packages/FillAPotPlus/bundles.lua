@@ -1,0 +1,15 @@
+return {
+ {key="Desert/Desert01",world="/Game/Maps/GameMaps/Desert/Desert",name="Shard of Wiqqarra",preview="Desert/Desert01.jpg",pots=5,target=3},
+ {key="DesertTown/DesertTown01",world="/Game/Maps/GameMaps/DesertTown/DesertTown",name="Desert Town",preview="DesertTown/DesertTown01.jpg",pots=5,target=3},
+ {key="Island/Island01",world="/Game/Maps/GameMaps/Island/Island",name="Loakiki Paradise",preview="Island/Island01.jpg",pots=5,target=3},
+ {key="IslandsDawn/IslandDawn01",world="/Game/Maps/GameMaps/IslandsDawn/IslandsDawn",name="Kula Kula Islands",preview="IslandsDawn/IslandDawn01.jpg",pots=5,target=3},
+ {key="Library/Libary01",world="/Game/Maps/GameMaps/Library/Library",name="Grunewald at Day",preview="Library/Libary01.jpg",pots=5,target=3},
+ {key="LibraryInsideNight/LibaryNight01",world="/Game/Maps/GameMaps/Library/LibraryInsideNight",name="Grunewald Library",preview="LibraryInsideNight/LibaryNight01.jpg",pots=4,target=2},
+ {key="PirateCave/PirateCave01",world="/Game/Maps/GameMaps/PirateCave/PirateCave",name="Shipwreck Hollow",preview="PirateCave/PirateCave01.jpg",pots=5,target=3},
+ {key="PirateIsland/PirateIsland01",world="/Game/Maps/GameMaps/PirateIsland/PirateIsland",name="Port Plunder",preview="PirateIsland/PirateIsland01.jpg",pots=5,target=3},
+ {key="Stoneage/StoneAge01",world="/Game/Maps/GameMaps/StoneAge/Stoneage",name="Stone Age",preview="Stoneage/StoneAge01.jpg",pots=5,target=3},
+ {key="Theater/Theater01",world="/Game/Maps/GameMaps/Theater/Theater",name="Twin Mask Theatre",preview="Theater/Theater01.jpg",pots=5,target=3},
+ {key="TowerIsland/TowerIsland01",world="/Game/Maps/GameMaps/TowerIsland/TowerIsland",name="Tower Island",preview="TowerIsland/TowerIsland01.jpg",pots=5,target=3},
+ {key="WitchHouse/WitchHouse01",world="/Game/Maps/GameMaps/WitchHouse/WitchHouse",name="Witch House",preview="WitchHouse/WitchHouse01.jpg",pots=5,target=3},
+ {key="Tower/Tower01",world="/Game/Maps/GameMaps/Tower/Tower",name="Tower",preview="Tower/Tower01.jpg",pots=5,target=3},
+}
