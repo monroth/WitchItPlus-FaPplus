@@ -1,6 +1,6 @@
 return function(S)
     local R,C,U = S.R,S.C,S.U
-    local defaults = {unequal=true, startReady=false, roleChoice=true, lives=10,
+    local defaults = {unequal=true, startReady=false, roleChoice=true, lives=4,
         respawn=5, totems=1, revive=3, filledRevive=false, targetOffset=0,
         grace=120, order='wins,pots,time,kills,props,lives',
         plusMode=false, lateSpectate=true, rejoin=true}
@@ -139,7 +139,7 @@ return function(S)
         return S.rules()[key]
     end
     local function row(parent,key)
-        local opts={editable=false,label=labels[key],tooltip=help[key],value=shown(key),default=key=='lives' and 4 or defaults[key],
+        local opts={editable=false,label=labels[key],tooltip=help[key],value=shown(key),default=defaults[key],
             on_change=function(v) change(key,v) end}
         if bounds[key] then
             opts.min,opts.max,opts.step,opts.input_max,opts.input_min=table.unpack(bounds[key])
