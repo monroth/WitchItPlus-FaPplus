@@ -264,6 +264,16 @@ return function(S)
     R.pre('/Game/Blueprints/Core/B_GameInstance.B_GameInstance_C:HostGame',function(gi)
         if S.selected(gi.UsedMatchOptions) then pref.roleChoice=gi.UsedMatchOptions.TeamSwitchingOption==1 end
     end)
+    -- In Fill a Pot the game always lets players pick a team. Team Choice, also from the in-game
+    -- menu, decides whether the first team starts as witches and the logos say so.
+    S.onMatchHost.post(custom..'BndEvt__ComboBox_TeamChoice_K2Node_ComponentBoundEvent_1_OnSelectionChanged__DelegateSignature',function()
+        local choice=C.session().gi.NextMatchOptions.TeamSwitchingOption==1
+        pref.roleChoice=choice
+        if S.match then S.match.rules.roleChoice=choice end
+        local mm=S.manager()
+        if mm.CurrentRound==0 then mm:RandomizeTeamAStartsAsWitch() end
+        S.publishRules();S.refreshHUD()
+    end)
     -- Hosting decides the mode: the options being hosted carry the Fill a Pot+ choice.
     R.pre('/Script/OnlineSubsystemBlueprints.OnlineSessionSubsystemCreateSession:CreateSession',function(_,subsystem,_,_,settings)
         local gi=StaticFindObject('/Script/Engine.Default__GameplayStatics'):GetGameInstance(subsystem)

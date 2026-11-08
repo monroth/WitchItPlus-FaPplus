@@ -187,6 +187,18 @@ return function(S)
                 onCauldron=true
                 local p=totem(pot:GetTransform());filled[pot:GetAddress()]=p;pending={}
                 onCauldron=false
+                if p then
+                    -- The cauldron's origin is inside it; the totem stands, turned like the cauldron,
+                    -- on what a ray along the cauldron's up axis meets.
+                    local c,u=pot:K2_GetActorLocation(),pot:GetActorUpVector()
+                    local function along(d) return {X=c.X+u.X*d,Y=c.Y+u.Y*d,Z=c.Z+u.Z*d} end
+                    local hit=R.native.capsule_probe(p,p,along(250),along(-50),1,1)
+                    if hit.blocked then
+                        local h=hit.position
+                        p.RootComponent:SetMobility(2)
+                        p:K2_TeleportTo({X=h.X+u.X*80,Y=h.Y+u.Y*80,Z=h.Z+u.Z*80},pot:K2_GetActorRotation())
+                    end
+                end
             end
         end
     end
